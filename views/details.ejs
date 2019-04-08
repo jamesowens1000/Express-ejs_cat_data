@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EJS Cat Data</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+    </head>
+    <body>
+        <h1>Details Page for <%= cat[0].name %></h1>
+        <img class="cat-pic" src=<%= cat[0].image %> alt=<%= cat[0].name %>>
+        <p>Favorite food: <%= cat[0].favorite_food %></p>
+        <p>Age: <%= cat[0].age %></p>
+        <p>Sleeping spots:</p>
+        <ul>
+            <% for (var ss in cat[0].sleeping_spots) { %>
+                <li><%= cat[0].sleeping_spots[ss] %></li>
+            <% } %>
+        </ul>
+    </body>
+</html>
